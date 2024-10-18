@@ -1,0 +1,65 @@
+/*Task 1: Create a Basic CSS Grid Layout*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main-content sidebar"
+        "footer footer";
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #d1d1d1;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #c1c1c1;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Task 2: Implement Responsive Design Using CSS Grid*/
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "header"
+            "main-content"
+            "sidebar"
+            "footer";
+    }
+}
+
+/*Task 3: Advanced Grid Layout with Template Columns and Rows*/
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main-content sidebar"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
